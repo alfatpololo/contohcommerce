@@ -11,13 +11,13 @@ module.exports = (env, argv) => {
   return {
     entry: "./src/js/app.js",
     output: {
-      path: path.resolve(__dirname, "dist"),
+      path: path.resolve(__dirname, "build"),  // <-- ubah di sini
       filename: "js/app.bundle.js",
       clean: true,
     },
     devServer: {
       static: {
-        directory: path.join(__dirname, "dist"),
+        directory: path.join(__dirname, "build"), // sesuaikan juga devServer
       },
       compress: true,
       port: 3000,
